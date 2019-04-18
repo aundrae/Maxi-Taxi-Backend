@@ -2,12 +2,12 @@ const firebase=require('firebase');
 require('firebase/firestore')
 
 var config = {
-    apiKey: "AIzaSyAvpNOm0tP6GDSxprXijvOmQBhco32MDFw",
-    authDomain: "maxi-taxi-c2eae.firebaseapp.com",
-    databaseURL: "https://maxi-taxi-c2eae.firebaseio.com",
-    projectId: "maxi-taxi-c2eae",
-    storageBucket: "maxi-taxi-c2eae.appspot.com",
-    messagingSenderId: "433591686426"
+    apiKey: "AIzaSyDkUHXPIpLCx9G6cMbrdE9h7nKyGlx9HhI",
+    authDomain: "express-demo-54676.firebaseapp.com",
+    databaseURL: "https://express-demo-54676.firebaseio.com",
+    projectId: "express-demo-54676",
+    storageBucket: "express-demo-54676.appspot.com",
+    messagingSenderId: "157079182412"
   };
 firebase.initializeApp(config);
 const db=firebase.firestore();
