@@ -6,7 +6,7 @@ var config = {
     authDomain: "maxi-taxi-c2eae.firebaseapp.com",
     databaseURL: "https://maxi-taxi-c2eae.firebaseio.com",
     projectId: "maxi-taxi-c2eae",
-    storageBucket: "",
+    storageBucket: "maxi-taxi-c2eae.appspot.com",
     messagingSenderId: "433591686426"
   };
 firebase.initializeApp(config);
