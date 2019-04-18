@@ -2,7 +2,6 @@
   "engines": {
     "node": "^10.15.1",
     "npm": "^6.4.1",
-    "yarn": "^1.15.2"
   },
   "name": "maxi-driver-backend",
   "version": "1.0.0",
