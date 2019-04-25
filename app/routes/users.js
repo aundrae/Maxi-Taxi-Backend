@@ -1,6 +1,6 @@
-module.exports=function(app,usersdb){
+module.exports=function(app,usersDb){
     app.post('/api/create',(req,res)=>{
-        transactionsdb.addUser(req.body).then(doc=>{
+        usersDb.addUser(req.body).then(doc=>{
             res.send("Added")
         })
     })
