@@ -9,4 +9,9 @@ module.exports=function(app,usersDb){
             res.json(doc)
         })
     })
+    app.get('/api/user/:user',(req,res)=>{
+        usersDb.getDriverByUid(req.params.user).then(doc=>{
+            res.json(doc)
+        })
+    })
 }

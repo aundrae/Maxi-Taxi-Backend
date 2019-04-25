@@ -30,6 +30,17 @@ function UsersAccounts(name){
                 })
                 return arr[0]
             })
+        },
+        getDriverByUid: uid =>{
+            return refNotes.get().then(querySnapshot=>{
+                arr=[]
+                querySnapshot.forEach(doc=>{
+                    temp=doc.data()
+                    if(temp.user==uid)
+                        arr.push(temp)
+                })
+                return arr[0]
+            })
         }
     }
 }
