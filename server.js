@@ -18,8 +18,8 @@ app.use(cors())
 
 transactionsRoute(app,transactionsdb);
 usersRoute(app,usersDb);
-const port=8000;
-//const port = process.env.PORT;
+//const port=8000;
+const port = process.env.PORT;
 
 app.listen(port,()=>{
     console.log("Live on port "+port);
