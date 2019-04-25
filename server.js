@@ -2,10 +2,10 @@ const express = require('express');
 const bodyParser = require('body-parser');
 //Routes
 const transactionsRoute=require('./app/routes/transactions');
-const usersRoute=require('./app/routes/users')
+//const authRoute=require('./app/routes/auth')
 //Database Collections
+//const authData=require('./app/auth/auth')();
 const transactionsdb=require('./app/database/database')('transactions');
-const usersDb=require('./app/database/users')('users')
 const helmet=require('helmet');
 const cors=require('cors');
 const app= express();
@@ -17,7 +17,7 @@ app.use(cors())
 
 
 transactionsRoute(app,transactionsdb);
-usersRoute(app,usersDb);
+//authRoute(app,authData)
 //const port=8000;
 const port = process.env.PORT;
 
