@@ -6,38 +6,24 @@ const db=firebase.firestore();
 const settings={};
 db.settings(settings);
 
-function TransactionsDatabase(name){
+function Users(name){
     const refNotes=db.collection(name)
 
     return{
-        getName: () => name,
-
-        all: () =>{
-            return refNotes.get().then(querySnapshot =>{
-                const arr =[]
-                querySnapshot.forEach(doc=>{
-                    arr.push(doc.data())
-                })
-                return arr
-            })
-        },
-
-        findByDriverName: name =>{
+        findByUID: name =>{
             return refNotes.get().then(querySnapshot=>{
-                const arr=[]
                 querySnapshot.forEach(doc=>{
                     temp=doc.data()
                     if(temp.name==name)
-                    arr.push(temp)
+                        return temp
                 })
-                return arr
+                return null
             })
         },
-        
-        addTransaction: transaction =>{
+        addUser: data =>{
             docRef= db.collection(name).doc()
             const newItem={
-                ...transaction,
+                ...data,
                 id:docRef.id
             }
             return docRef.set(newItem,{merge:true}).then(()=>{
@@ -46,4 +32,3 @@ function TransactionsDatabase(name){
         }
     }
 }
-module.exports=TransactionsDatabase
