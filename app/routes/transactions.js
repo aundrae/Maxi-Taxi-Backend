@@ -10,8 +10,8 @@ module.exports=function(app,transactionsdb){
     });
 
     //get transactions based on driver ID
-    app.get('/api/transactions/driverid/:id',(req,res)=>{
-        transactionsdb.findByDriverName(req.params.name).then(doc=>[
+    app.get('/api/transactions/driverID/:driverID',(req,res)=>{
+        transactionsdb.findByDriverPlate(req.params.driverID).then(doc=>[
             res.json(doc)
         ])
     })
