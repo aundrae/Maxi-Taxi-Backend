@@ -32,3 +32,4 @@ function Users(name){
         }
     }
 }
+module.exports=Users

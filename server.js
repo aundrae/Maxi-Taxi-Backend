@@ -5,7 +5,7 @@ const transactionsRoute=require('./app/routes/transactions');
 const usersRoute=require('./app/routes/users')
 //Database Collections
 const transactionsdb=require('./app/database/database')('transactions');
-const usersDb=require('./app/database/users')
+const usersDb=require('./app/database/users')('users')
 const helmet=require('helmet');
 const cors=require('cors');
 const app= express();
