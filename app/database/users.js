@@ -18,6 +18,18 @@ function UsersAccounts(name){
             return docRef.set(newItem,{merge:true}).then(()=>{
                 return newItem
             })
+        },
+
+        getDriverInfo: plate=>{
+            return refNotes.get().then(querySnapshot=>{
+                arr=[]
+                querySnapshot.forEach(doc=>{
+                    temp=doc.data()
+                    if(temp.plate==plate)
+                        arr.push(temp)
+                })
+                return arr[0]
+            })
         }
     }
 }

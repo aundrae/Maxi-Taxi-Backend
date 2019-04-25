@@ -4,4 +4,9 @@ module.exports=function(app,usersDb){
             res.send("Added")
         })
     })
+    app.get('/api/plate/:plate',(req,res)=>{
+        usersDb.getDriverInfo(req.params.plate).then(doc=>{
+            res.json(doc)
+        })
+    })
 }
